@@ -1,0 +1,39 @@
+<%- include('_header') %>
+<form action="/auth/signup" method="POST" class="w-full flex items-center justify-center my-12" id="signup-form">
+  <div class="bg-white dark:bg-gray-800 shadow rounded py-16 lg:px-28 px-8">
+    <p class="md:text-3xl text-xl font-bold leading-7 text-center text-gray-700 dark:text-white">SignUp</p>
+
+    <div class="md:flex items-center mt-12">
+      <div class="md:w-72 flex flex-col">
+        <label for="fname" class="text-base font-semibold leading-none text-gray-800 dark:text-white">User Name</label>
+        <input tabindex="0" aria-label="Please input name" type="text" class="text-base leading-none text-gray-900 p-3 focus:outline-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100" name="username" id="fname" />
+      </div>
+    </div>
+
+    <div class="md:flex items-center mt-8">
+      <div class="md:w-72 flex flex-col">
+        <label for="email" class="text-base font-semibold leading-none text-gray-800 dark:text-white">Email</label>
+        <input tabindex="0" aria-label="Please input email" type="text" class="text-base leading-none text-gray-900 p-3 focus:outline-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100" name="email" id="email" />
+      </div>
+
+      <div class="md:w-72 flex flex-col md:ml-6 md:mt-0 mt-4">
+        <label for="password" class="text-base font-semibold leading-none text-gray-800 dark:text-white">Password</label>
+        <input tabindex="0" aria-label="Please input password" type="password" class="text-base leading-none text-gray-900 p-3 focus:outline-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100" name="password" id="password" />
+      </div>
+
+      <div class="md:w-72 flex flex-col md:ml-6 md:mt-0 mt-4">
+        <label for="role" class="text-base font-semibold leading-none text-gray-800 dark:text-white">Role</label>
+        <select name="role" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+          <option value="Admin">Admin</option>
+          <option value="User">User</option>
+        </select>
+      </div>
+    </div>
+
+    <p class="text-xs leading-3 text-gray-600 dark:text-gray-200 mt-4">By clicking submit, you agree to our terms of service, privacy policy, and how we use data as stated.</p>
+
+    <div>
+      <button class="mt-9 text-base font-semibold leading-none text-white py-4 px-10 bg-indigo-700 rounded hover:bg-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none" type="submit">Signup</button>
+    </div>
+  </div>
+</form>
