@@ -85,8 +85,7 @@ router.get("/logout", (req, res) => {
       console.error("Error logging out:", err);
       res.status(500).json({ message: "Error logging out" });
     } else {
-      res.render("index", { session: req.session });
-      // res.status(200).json({ message: "Logged out successfully" });
+      res.redirect("/");
     }
   });
 });

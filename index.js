@@ -48,6 +48,11 @@ app.get("/", async (req, res) => {
   res.render("index", { session: req.session });
 });
 
+//about page
+app.get("/about", async (req, res) => {
+  res.render("about", { session: req.session });
+});
+
 // View all events
 app.get("/events", async (req, res) => {
   try {
